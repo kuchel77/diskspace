@@ -22,7 +22,7 @@ DEFAULT_UOM = "GB"
 DEFAULT_ICON = "mdi:harddisk"
 DEFAULT_PATH = "/"
 
-MIN_TIME_BETWEEN_UPDATES = datetime.timedelta(seconds=10)
+MIN_TIME_BETWEEN_UPDATES = datetime.timedelta(seconds=60)
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
     {
