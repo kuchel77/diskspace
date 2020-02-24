@@ -92,13 +92,13 @@ class DiskSpaceSensor(Entity):
             self._attributes["free"] = free // (10 ** 9)
 
         elif self._uom == "MB":
-            self._attributes["total"] = total // (2 ** 20)
-            self._attributes["used"] = used // (2 ** 20)
-            self._attributes["free"] = free // (2 ** 20)
+            self._attributes["total"] = total // (10 ** 6)
+            self._attributes["used"] = used // (10 ** 6
+            self._attributes["free"] = free // (10 ** 6)
         elif self._uom == "TB":
-            self._attributes["total"] = total // (2 ** 40)
-            self._attributes["used"] = used // (2 ** 40)
-            self._attributes["free"] = free // (2 ** 40)
+            self._attributes["total"] = total // (10 ** 12)
+            self._attributes["used"] = used // (10 ** 12)
+            self._attributes["free"] = free // (10 ** 12)
         else:
             self._attributes["total"] = total
             self._attributes["used"] = used
