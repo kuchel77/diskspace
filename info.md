@@ -2,6 +2,8 @@
 
 Disk space sensor for Home Assistant.
 
+Example configuration.yaml
+
 ```yaml
 sensor:
   - platform: diskspace
@@ -10,11 +12,25 @@ sensor:
     unit_of_measure: "GB"
 ```
 
+**Unit of Measure:**
+* GB - Gigabytes 
+* MB - Megabytes
+* TB - Terabyes
+* Anything else - Raw data which is given in bytes.
+
+*This uses 1000MB = 1GB*
+
+**Name:** Anything you like. The sensor will then be sensor.disk_space_*name*
+
+**Path:** Where the mount path is. This can be found from the command line using the command *mount* for instance.
+
 ## Notes
+
+This is an example of what a sensor looks like.
 
 Sensor|State|Attributes
 ------|-----|----------
-sensor.disk_space_main_disk|368|total: 490 used: 97 free: 368 percentage_free: 75 unit_of_measurement: GB friendly_name: disk space Main Disk icon: mdi:harddisk
+sensor.disk_space_main_disk | 368 | total: 490 used: 97 free: 368 
 
 
 Notice that Total - Used doesn't equal Free. This is a limitation of the operating system and happens on both MacOS and Linux.
@@ -33,5 +49,3 @@ Notice that Total - Used doesn't equal Free. This is a limitation of the operati
         message: Main disk is almost full
       service: notify.slack
 ```
-
-Be careful with the indentation if copy and pasting this example.
