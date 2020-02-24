@@ -20,12 +20,13 @@ CONF_UOM = "unit_of_measure"
 
 DEFAULT_UOM = "GB"
 DEFAULT_ICON = "mdi:harddisk"
+DEFAULT_PATH = "/"
 
 MIN_TIME_BETWEEN_UPDATES = datetime.timedelta(seconds=10)
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
     {
-        vol.Required(CONF_PATH): cv.string,
+        vol.Required(CONF_PATH, default=DEFAULT_PATH): cv.string,
         vol.Required(CONF_NAME): cv.string,
         vol.Optional(CONF_ICON, default=DEFAULT_ICON): cv.string,
         vol.Required(CONF_UOM, default=DEFAULT_UOM): cv.string,
