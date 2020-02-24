@@ -13,7 +13,7 @@ sensor:
 ## Notes
 
 Sensor|State|Attributes
------------------------
+------|-----|----------
 sensor.disk_space_main_disk|368|total: 490 used: 97 free: 368 percentage_free: 75 unit_of_measurement: GB friendly_name: disk space Main Disk icon: mdi:harddisk
 
 
