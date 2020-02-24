@@ -103,5 +103,5 @@ class DiskSpaceSensor(Entity):
             self._attributes["used"] = used
             self._attributes["free"] = free
 
-        self._attributes["percentage_free"] = (free / total) * 100
+        self._attributes["percentage_free"] = round((free / total) * 100, 1)
         self._state = self._attributes["free"]
