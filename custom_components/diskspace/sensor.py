@@ -1,27 +1,22 @@
 """Sensor platform for Local Diskspace"""
 import datetime
 import logging
-import requests
 import shutil
-
-from datetime import timedelta
 
 import homeassistant.helpers.config_validation as cv
 import voluptuous as vol
 from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.const import ATTR_ATTRIBUTION, CONF_NAME, CONF_ICON
+from homeassistant.const import CONF_NAME, CONF_ICON
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
 
-__version__ = "v0.4"
+__version__ = "v0.1"
 _LOGGER = logging.getLogger(__name__)
 
 REQUIREMENTS = []
 
 CONF_PATH = "path"
 CONF_UOM = "unit_of_measure"
-CONF_ICON = "icon"
-CONF_NAME = "name"
 
 DEFAULT_UOM = "GB"
 DEFAULT_ICON = "mdi:harddisk"
@@ -36,7 +31,6 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
         vol.Required(CONF_UOM, default=DEFAULT_UOM): cv.string,
     }
 )
-
 
 def setup_platform(hass, config, add_entities, discovery_info=None):
     "Setup Platform"
