@@ -81,7 +81,7 @@ class DiskSpaceSensor(Entity):
         self._state = 0
 
         try:
-            total, used, free = shutil.disk_usage("/")
+            total, used, free = shutil.disk_usage(self._path)
         except Exception as err:
             _LOGGER.warning("Other Error: %s", err)
 
