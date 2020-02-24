@@ -1,0 +1,3 @@
+"""
+Sensor for Local Diskspace
+"""

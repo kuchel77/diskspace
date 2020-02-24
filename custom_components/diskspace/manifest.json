@@ -1,0 +1,12 @@
+{
+  "domain": "diskspace",
+  "name": "diskspace",
+  "config_flow": true,
+  "documentation": "https://www.home-assistant.io/integrations/diskspace",
+  "requirements": [],
+  "ssdp": [],
+  "zeroconf": [],
+  "homekit": {},
+  "dependencies": [],
+  "codeowners": ["@kuchel77"]
+}
