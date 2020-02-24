@@ -46,7 +46,6 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
         ]
     )
 
-
 class DiskSpaceSensor(Entity):
     def __init__(self, name: str, path: str, icon: str, uom: str):
         self._state = None
@@ -90,7 +89,6 @@ class DiskSpaceSensor(Entity):
             self._attributes["total"] = total // (10 ** 9)
             self._attributes["used"] = used // (10 ** 9)
             self._attributes["free"] = free // (10 ** 9)
-
         elif self._uom == "MB":
             self._attributes["total"] = total // (10 ** 6)
             self._attributes["used"] = used // (10 ** 6
