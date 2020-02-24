@@ -3,12 +3,12 @@ import datetime
 import logging
 import shutil
 
-import homeassistant.helpers.config_validation as cv
-import voluptuous as vol
-from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.const import CONF_NAME, CONF_ICON
-from homeassistant.helpers.entity import Entity
-from homeassistant.util import Throttle
+import homeassistant.helpers.config_validation as cv # pylint: disable=import-error
+import voluptuous as vol # pylint: disable=import-error
+from homeassistant.components.sensor import PLATFORM_SCHEMA # pylint: disable=import-error
+from homeassistant.const import CONF_NAME, CONF_ICON # pylint: disable=import-error
+from homeassistant.helpers.entity import Entity # pylint: disable=import-error
+from homeassistant.util import Throttle # pylint: disable=import-error
 
 __version__ = "v0.1"
 _LOGGER = logging.getLogger(__name__)
