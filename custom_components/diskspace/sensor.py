@@ -57,7 +57,7 @@ class DiskSpaceSensor(Entity):
 
     @property
     def name(self):
-        return "disk space " + self._name
+        return "Disk Space " + self._name
 
     @property
     def state(self):
