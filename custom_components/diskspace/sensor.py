@@ -10,7 +10,7 @@ from homeassistant.const import CONF_NAME, CONF_ICON
 from homeassistant.helpers.entity import Entity
 from homeassistant.util import Throttle
 
-__version__ = "v0.1"
+__version__ = "v0.5"
 _LOGGER = logging.getLogger(__name__)
 
 REQUIREMENTS = []
