@@ -82,7 +82,7 @@ class DiskSpaceSensor(Entity):
 
         try:
             total, used, free = shutil.disk_usage(self._path)
-            _LOGGER.debug("Path %s", path)
+            _LOGGER.debug("Path %s", self._path)
             _LOGGER.debug("Total %s", total)
             _LOGGER.debug("Used %s", used)
             _LOGGER.debug("Free %s", free)
