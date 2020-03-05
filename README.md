@@ -1,5 +1,4 @@
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg?style=for-the-badge)](https://github.com/custom-components/hacs)
-[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge)](https://github.com/custom-components/hacs)
 
 Disk space sensor for Home Assistant.
 
@@ -43,8 +42,7 @@ Notice that Total - Used doesn't equal Free. This is a limitation of the operati
   description: "Notify me of low disk space"
   trigger:
     - platform: template
-      value_template: "{% if state_attr('sensor.disk_space_main_disk', 'percentage_free') < 10 %}true{% endif %}"
-  condition: []
+      value_template: "{{ state_attr('sensor.disk_space_main_disk', 'percentage_free') < 10 }}"
   action:
     - data:
         message: Main disk is almost full
