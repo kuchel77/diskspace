@@ -2,5 +2,5 @@
     "name": "Disk Space",
     "content_in_root": false,
     "domains": ["sensor"],
-    "render_readme": false   
+    "render_readme": true
 }
